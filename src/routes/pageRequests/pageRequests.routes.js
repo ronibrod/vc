@@ -24,12 +24,6 @@ const pageRequestsRoutes = () => [
         path: '/entryPage',
         handler: Handler.putEntryPage,
         description: ''
-    },
-    {
-        method: 'get',
-        path: '/search',
-        handler: Handler.searchPage,
-        description: ''
     }
 ];
 

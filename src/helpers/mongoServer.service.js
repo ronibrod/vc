@@ -2,7 +2,8 @@ const MongoClient = require('mongodb').MongoClient;
 
 class MongoService {
     constructor() {
-        this.mongoUri = process.env.MONGO_URI;
+        // this.mongoUri = process.env.MONGO_URI;
+        this.mongoUri = 'mongodb://localhost:27017';
     }
 
     async start() {
@@ -20,5 +21,8 @@ class MongoService {
         this.mongoClient.close();
     }
 };
+
+const mongoService = new MongoService();
+mongoService.start();
 
 module.exports = MongoService;

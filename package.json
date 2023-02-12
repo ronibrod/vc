@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mongo:start": "docker run --rm -d -p 27017:27017 --name mongo-todo mongo:4",
+    "mongo:stop": "docker stop mongo-todo",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/mongodb": "^6.2.0",
     "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
     "fastify": "^4.12.0",
-    "mongodb": "^5.0.0"
+    "fs": "^0.0.1-security",
+    "mongodb": "^5.0.0",
+    "mongoose": "^6.9.1"
   }
 }
